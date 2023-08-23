@@ -1,0 +1,4 @@
+Name: Quarter Eater
+
+Line 1: Do you got any quarters on you?
+Line 2: All this dancing is making me hungry.
