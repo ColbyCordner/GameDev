@@ -6,9 +6,29 @@ public class PaddleControl : MonoBehaviour
 
     void Update()
     {
+        // Check for touch input
+        if (Input.touchCount > 0)
+        {
+            Touch touch = Input.GetTouch(0);
+
+            // Check if touch is on the left or right half of the screen
+            if (touch.position.x < Screen.width / 2)
+            {
+                // Move the paddle left
+                MovePaddle(-1f);
+            }
+            else
+            {
+                // Move the paddle right
+                MovePaddle(1f);
+            }
+        }
+    }
+
+    void MovePaddle(float direction)
+    {
         // Move the paddle
-        float horizontalInput = Input.GetAxis("Horizontal");
-        Vector3 paddlePosition = transform.position + Vector3.right * horizontalInput * paddleSpeed * Time.deltaTime;
+        Vector3 paddlePosition = transform.position + Vector3.right * direction * paddleSpeed * Time.deltaTime;
         paddlePosition.x = Mathf.Clamp(paddlePosition.x, -8.5f, 8.5f); // Limit paddle movement
         transform.position = paddlePosition;
     }

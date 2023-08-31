@@ -3,9 +3,9 @@ using UnityEngine;
 public class CollisionSound : MonoBehaviour
 {
     public AudioClip brickCollisionSound;
-    public AudioClip floorCollisionSound;
     public AudioClip wallCollisionSound;
     public AudioClip paddleCollisionSound;
+    public AudioClip floorCollisionSound;
 
     private AudioSource audioSource;
 
@@ -16,35 +16,24 @@ public class CollisionSound : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if (audioSource == null)
-        {
-            Debug.LogWarning("AudioSource is not attached to this GameObject.");
-            return;
-        }
-
         if (collision.gameObject.CompareTag("Brick"))
         {
             audioSource.clip = brickCollisionSound;
-        }
-        else if (collision.gameObject.CompareTag("Floor"))
-        {
-            audioSource.clip = floorCollisionSound;
+            audioSource.Play();
         }
         else if (collision.gameObject.CompareTag("Wall"))
         {
             audioSource.clip = wallCollisionSound;
+            audioSource.Play();
         }
         else if (collision.gameObject.CompareTag("Paddle"))
         {
             audioSource.clip = paddleCollisionSound;
+            audioSource.Play();
         }
-        else
+        else if (collision.gameObject.CompareTag("Floor"))
         {
-            return; // No specific collision tag, exit early
-        }
-
-        if (audioSource.clip != null)
-        {
+            audioSource.clip = floorCollisionSound;
             audioSource.Play();
         }
     }

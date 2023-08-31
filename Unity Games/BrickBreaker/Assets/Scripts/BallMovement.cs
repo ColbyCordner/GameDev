@@ -52,11 +52,18 @@ public class BallMovement : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Floor"))
         {
-
             Debug.Log("GAME OVER");
             gameManager.LoseGame();
+    
+            // Explicitly set the ball's velocity to zero to ensure it stops completely
+            Rigidbody ballRigidbody = GetComponent<Rigidbody>();
+            ballRigidbody.velocity = Vector3.zero;
+            ballRigidbody.angularVelocity = Vector3.zero;
+
+            ballRigidbody.useGravity = true;
             ballDirection = Vector3.zero;
         }
+
         else
         {
             // Calculate new direction on collision with the paddle
