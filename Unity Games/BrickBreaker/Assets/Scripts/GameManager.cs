@@ -13,6 +13,10 @@ public class GameManager : MonoBehaviour
     
     public GameObject gameOver;
     public GameObject youWin;
+    
+    public AudioSource gameAudioSource;
+    public AudioClip winSound;
+
 
     private void Start()
     {
@@ -65,9 +69,14 @@ public class GameManager : MonoBehaviour
 
     public void WinGame()
     {
+        // Play the win sound
+        gameAudioSource.clip = winSound;
+        gameAudioSource.Play();
+
         // Handle winning condition here (e.g., load a win scene, show UI)
         Debug.Log("You win!");
         youWin.SetActive(true);
     }
+
     
 }

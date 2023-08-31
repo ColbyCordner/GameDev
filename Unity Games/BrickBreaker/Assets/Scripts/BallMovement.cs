@@ -7,8 +7,6 @@ public class BallMovement : MonoBehaviour
     private Vector3 ballDirection;
     private int totalBricks;
     private int bricksDestroyed = 0;
-    
-
 
     private void Start()
     {
@@ -35,7 +33,7 @@ public class BallMovement : MonoBehaviour
         if (collision.gameObject.CompareTag("Brick"))
         {
             AudioSource brickAudio = collision.gameObject.GetComponent<AudioSource>();
-            Debug.Log("Hit brick");
+            
             // Delete the brick on collision
             Destroy(collision.gameObject);
             bricksDestroyed++;
@@ -52,7 +50,6 @@ public class BallMovement : MonoBehaviour
         }
         else if (collision.gameObject.CompareTag("Floor"))
         {
-            Debug.Log("GAME OVER");
             gameManager.LoseGame();
     
             // Explicitly set the ball's velocity to zero to ensure it stops completely
@@ -70,12 +67,5 @@ public class BallMovement : MonoBehaviour
             Vector3 newDirection = Vector3.Reflect(ballDirection, collision.contacts[0].normal);
             ballDirection = new Vector3(newDirection.x, newDirection.y, 0f).normalized;
         }
-    }
-
-    private void GameOver()
-    {
-        // Load the game over scene (adjust the scene index or name as needed)
-        //SceneManager.LoadScene("GameOverScene");
-        
     }
 }

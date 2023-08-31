@@ -29,7 +29,7 @@ public class PaddleControl : MonoBehaviour
     {
         // Move the paddle
         Vector3 paddlePosition = transform.position + Vector3.right * direction * paddleSpeed * Time.deltaTime;
-        paddlePosition.x = Mathf.Clamp(paddlePosition.x, -8.5f, 8.5f); // Limit paddle movement
+        paddlePosition.x = Mathf.Clamp(paddlePosition.x, -6.25f, 6.25f); // Limit paddle movement
         transform.position = paddlePosition;
     }
 }
