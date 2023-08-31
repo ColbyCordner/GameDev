@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: 3465e8adbc03b674e8c89987ddc83176
+MonoImporter:
+  externalObjects: {}
+  serializedVersion: 2
+  defaultReferences:
+  - brickCollisionSound: {fileID: 8300000, guid: 3e9fd42bb9467914f84dcea2fe30955b, type: 3}
+  - floorCollisionSound: {fileID: 8300000, guid: 5908d09872ac4754bb509e36ae798458, type: 3}
+  - wallCollisionSound: {fileID: 8300000, guid: 4187f000200c8f5438bbd3f33035a87d, type: 3}
+  - paddleCollisionSound: {instanceID: 0}
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

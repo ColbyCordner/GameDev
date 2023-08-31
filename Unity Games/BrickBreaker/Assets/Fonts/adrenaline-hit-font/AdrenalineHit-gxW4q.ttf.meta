@@ -1,0 +1,22 @@
+fileFormatVersion: 2
+guid: 862884b3fccaf6f499453fb5556be7ff
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Adrenaline Hit
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: b0555169c3cec3045b69350fc6f4413b, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

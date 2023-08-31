@@ -1,0 +1,23 @@
+fileFormatVersion: 2
+guid: d0aa2431bf9de984494b7e3e367addef
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontNames:
+  - Rollbox
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: a0f1224e403c8934793f701930e5bdd8, type: 3}
+  - {fileID: 12800000, guid: 00be7446ee392cd4bbed5007538ec1fa, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
