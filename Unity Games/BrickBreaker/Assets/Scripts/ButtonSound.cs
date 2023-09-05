@@ -12,7 +12,7 @@ public class ButtonSound : MonoBehaviour
 
     private void Start()
     {
-        buttonAudioSource = GetComponent<AudioSource>();
+        buttonAudioSource = GetComponent<AudioSource>();    
         buttonAudioSource.clip = buttonClickSound;
 
         Button button = GetComponent<Button>();
@@ -27,7 +27,7 @@ public class ButtonSound : MonoBehaviour
 
     public void RestartScene()
     {
-        StartCoroutine(LoadSceneWithDelay());
+            StartCoroutine(LoadSceneWithDelay());
     }
     
     public void StartGame()
